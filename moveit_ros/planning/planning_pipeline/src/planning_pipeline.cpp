@@ -136,7 +136,7 @@ void planning_pipeline::PlanningPipeline::configure()
     planner_instance_ = planner_plugin_loader_->createUniqueInstance(planner_plugin_name_);
     if (!planner_instance_->initialize(robot_model_, node_, parameter_namespace_))
       throw std::runtime_error("Unable to initialize planning plugin");
-    RCLCPP_INFO(LOGGER, "Using planning interface '%s'", planner_instance_->getDescription().c_str());
+    // RCLCPP_INFO(LOGGER, "Using planning interface '%s'", planner_instance_->getDescription().c_str());
   }
   catch (pluginlib::PluginlibException& ex)
   {

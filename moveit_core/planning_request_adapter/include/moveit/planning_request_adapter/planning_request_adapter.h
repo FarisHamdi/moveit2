@@ -103,13 +103,13 @@ protected:
     T value;
     if (!node->get_parameter(full_name, value))
     {
-      RCLCPP_INFO(logger, "Param '%s' was not set. Using default value: %s", full_name.c_str(),
-                  std::to_string(default_value).c_str());
+      // RCLCPP_INFO(logger, "Param '%s' was not set. Using default value: %s", full_name.c_str(),
+      //             std::to_string(default_value).c_str());
       return default_value;
     }
     else
     {
-      RCLCPP_INFO(logger, "Param '%s' was set to %s", full_name.c_str(), std::to_string(value).c_str());
+      // RCLCPP_INFO(logger, "Param '%s' was set to %s", full_name.c_str(), std::to_string(value).c_str());
       return value;
     }
   }
