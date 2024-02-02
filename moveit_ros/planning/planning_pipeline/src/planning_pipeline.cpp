@@ -186,7 +186,7 @@ void planning_pipeline::PlanningPipeline::configure()
       adapter_chain_ = std::make_unique<planning_request_adapter::PlanningRequestAdapterChain>();
       for (planning_request_adapter::PlanningRequestAdapterConstPtr& ad : ads)
       {
-        RCLCPP_INFO(LOGGER, "Using planning request adapter '%s'", ad->getDescription().c_str());
+        // RCLCPP_INFO(LOGGER, "Using planning request adapter '%s'", ad->getDescription().c_str());
         adapter_chain_->addAdapter(ad);
       }
     }
